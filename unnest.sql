@@ -1,0 +1,9 @@
+
+SELECT
+  date,
+  EXTRACT(ISOYEAR FROM date) AS isoyear,
+  EXTRACT(ISOWEEK FROM date) AS isoweek,
+  EXTRACT(YEAR FROM date) AS year,
+  EXTRACT(WEEK FROM date) AS week
+FROM UNNEST(GENERATE_DATE_ARRAY('2015-12-23', '2016-01-09')) AS date
+ORDER BY date;
