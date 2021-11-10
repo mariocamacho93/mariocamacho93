@@ -13,6 +13,7 @@ event_name,
 page_title
 order by event_count desc 
 )
-select event_name, page_title, event_count, users, event_count_per_user
+select event_name, page_title, event_count, users, round(event_count_per_user, 2) as event_count_per_user
 from events
 order by event_count desc 
+
